@@ -24,7 +24,19 @@ final class CredentialStoreTests: XCTestCase {
     //     -keyout /dev/null -out test.der -outform DER -days 365 \
     //     -subj "/CN=Test Employee/O=CorpToken" -nodes
     //   base64 -i test.der
-    private let testCertBase64 = ""  // TODO: paste base64-encoded DER cert here
+    private let testCertBase64 = "MIICRDCCAeqgAwIBAgIURDdfaDH7h4/tbzVPO66vNSjQz+EwCgYIKoZIzj0EAwIw" +
+        "WTEWMBQGA1UEAwwNVGVzdCBFbXBsb3llZTEVMBMGA1UECgwMVGVzdENvcnAgSW5j" +
+        "MSgwJgYJKoZIhvcNAQkBFhllbXBsb3llZUB0ZXN0Y29ycC5leGFtcGxlMB4XDTI2" +
+        "MTAwMzEyMTYyMloXDTI4MTAwMjEyMTYyMlowWTEWMBQGA1UEAwwNVGVzdCBFbXBs" +
+        "b3llZTEVMBMGA1UECgwMVGVzdENvcnAgSW5jMSgwJgYJKoZIhvcNAQkBFhllbXBs" +
+        "b3llZUB0ZXN0Y29ycC5leGFtcGxlMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE" +
+        "HvLJmjpYDU3N8lQsvtlrvHh5RgOUSzRZa1sqyH365dYFNnNj+XflUBz++Tt8/k/j" +
+        "beyC57Z9i8hCun86UVn+iaOBjzCBjDAdBgNVHQ4EFgQUMc6kHUnbXzz/xb4W9EVI" +
+        "NQ/0sOswHwYDVR0jBBgwFoAUMc6kHUnbXzz/xb4W9EVINQ/0sOswDwYDVR0TAQH/" +
+        "BAUwAwEB/zAkBgNVHREEHTAbgRllbXBsb3llZUB0ZXN0Y29ycC5leGFtcGxlMBMG" +
+        "A1UdJQQMMAoGCCsGAQUFBwMCMAoGCCqGSM49BAMCA0gAMEUCIQDe0OYAUuZSDseQ" +
+        "FKzmGbessvnLZPxRrMGmAHSUDP/NwQIgGbWKa/L6IKhTRcnZAhG9sTRuW/VarEYo" +
+        "QwX/YR5bAEg="
 
     private let store = CredentialStore.shared
 

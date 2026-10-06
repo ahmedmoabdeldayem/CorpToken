@@ -338,7 +338,7 @@ To use CorpToken for macOS login (replace password with Touch ID + certificate):
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/ahmedmoabdeldayem/CorpToken
 cd CorpToken
 
 # 2. Run the setup script (installs prerequisites)
