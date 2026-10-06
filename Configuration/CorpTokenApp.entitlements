@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <!-- =====================================================================
+         App Sandbox
+         Required for App Store distribution. Disable only if you distribute
+         outside the App Store and need unrestricted file access.
+         ===================================================================== -->
+    <key>com.apple.security.app-sandbox</key>
+    <true/>
+
+    <!-- =====================================================================
+         Keychain Access Groups
+         Allows the app to share keychain items with the token extension.
+         The $(AppIdentifierPrefix) is expanded to your Team ID at build time.
+         Add "com.yourcompany.CorpToken.shared" in your provisioning profile's
+         keychain-access-groups capability as well.
+         ===================================================================== -->
+    <key>keychain-access-groups</key>
+    <array>
+        <string>$(AppIdentifierPrefix)com.yourcompany.CorpToken.shared</string>
+    </array>
+
+    <!-- =====================================================================
+         App Groups
+         Shared UserDefaults and file container between app and extension.
+         Register this group in the Apple Developer Portal before building.
+         ===================================================================== -->
+    <key>com.apple.security.application-groups</key>
+    <array>
+        <string>group.com.yourcompany.CorpToken</string>
+    </array>
+
+    <!-- =====================================================================
+         Smart Card / Token Access
+         Required for apps that interact with CryptoTokenKit tokens or
+         PKCS#11 tokens. Needed for SecIdentity lookups that surface
+         token-backed credentials.
+         ===================================================================== -->
+    <key>com.apple.security.smartcard</key>
+    <true/>
+
+    <!-- =====================================================================
+         Network Client
+         Required to reach the enrollment backend (HTTPS).
+         Remove if enrollment is handled entirely by MDM without any in-app
+         network calls.
+         ===================================================================== -->
+    <key>com.apple.security.network.client</key>
+    <true/>
+
+    <!-- =====================================================================
+         Hardened Runtime
+         Required for notarization. Do NOT disable these if distributing
+         outside the App Store.
+         ===================================================================== -->
+    <key>com.apple.security.cs.allow-jit</key>
+    <false/>
+
+    <key>com.apple.security.cs.disable-library-validation</key>
+    <false/>
+
+</dict>
+</plist>

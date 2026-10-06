@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <!-- =====================================================================
+         Smart Card Entitlement
+         Required for CryptoTokenKit token extensions.
+         This entitlement is available with a standard Apple Developer account.
+
+         If you are building a NON-smart-card virtual token (no physical hardware
+         involved at all), you also need:
+             <key>com.apple.token</key><true/>
+         That entitlement requires Apple approval — file a request via
+         https://developer.apple.com/contact/request/system-software
+         ===================================================================== -->
+    <key>com.apple.security.smartcard</key>
+    <true/>
+
+    <!-- =====================================================================
+         Keychain Access Groups
+         Must match the app's entitlements exactly.
+         The extension reads the shared keychain to retrieve the SE key ref
+         and DER certificate during populateKeychainContents().
+         ===================================================================== -->
+    <key>keychain-access-groups</key>
+    <array>
+        <string>$(AppIdentifierPrefix)com.yourcompany.CorpToken.shared</string>
+    </array>
+
+    <!-- =====================================================================
+         App Groups
+         Reads shared UserDefaults (enrollment state) written by the container app.
+         ===================================================================== -->
+    <key>com.apple.security.application-groups</key>
+    <array>
+        <string>group.com.yourcompany.CorpToken</string>
+    </array>
+
+    <!-- Extensions run sandboxed — no network, no file access outside container.
+         The extension only reads keychain + UserDefaults, so no extra entitlements
+         are needed for its core operation. -->
+
+</dict>
+</plist>

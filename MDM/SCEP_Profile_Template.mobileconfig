@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  MDM SCEP Profile Template
+  =========================
+  Push this profile via your MDM (Jamf, Kandji, Mosyle, etc.) to automatically
+  enroll employees' Macs with a certificate from your CA.
+
+  IMPORTANT: Standard SCEP generates the key on the device in the REGULAR
+  keychain, NOT in the Secure Enclave. For SE keys, use the in-app enrollment
+  flow (EnrollmentViewModel) instead of this profile.
+
+  Use this profile when:
+    • You need certificates on hardware without a T2/Apple Silicon chip
+    • You want MDM to fully control enrollment with no user interaction
+    • Your CA supports SCEP (most enterprise CAs do: ADCS, EJBCA, Vault, etc.)
+
+  Replace all CHANGE_ME values before deploying.
+-->
+<plist version="1.0">
+<dict>
+
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <!-- SCEP Payload -->
+            <key>PayloadType</key>
+            <string>com.apple.security.scep</string>
+
+            <key>PayloadIdentifier</key>
+            <string>com.yourcompany.CorpToken.scep</string>
+
+            <key>PayloadUUID</key>
+            <string>CHANGE_ME_UNIQUE_UUID_1</string>  <!-- generate with uuidgen -->
+
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+
+            <key>PayloadDisplayName</key>
+            <string>CorpToken Employee Certificate</string>
+
+            <key>PayloadDescription</key>
+            <string>Issues an employee authentication certificate via SCEP</string>
+
+            <key>PayloadContent</key>
+            <dict>
+                <!-- Your SCEP server URL -->
+                <key>URL</key>
+                <string>https://scep.corp.yourcompany.com/scep</string>
+
+                <!-- Certificate subject.
+                     CN is often the employee's username or UPN.
+                     MDM variables like $FULLNAME and $EMAIL are substituted at deploy time. -->
+                <key>Subject</key>
+                <array>
+                    <array><array><string>CN</string><string>$FULLNAME</string></array></array>
+                    <array><array><string>emailAddress</string><string>$EMAIL</string></array></array>
+                    <array><array><string>O</string><string>CHANGE_ME_ORG_NAME</string></array></array>
+                </array>
+
+                <!-- Subject Alternative Name: UPN for Active Directory smart card login -->
+                <key>SubjectAltName</key>
+                <dict>
+                    <key>rfc822Name</key>
+                    <string>$EMAIL</string>
+                    <!-- For AD login, also add the UPN:
+                    <key>ntPrincipalName</key>
+                    <string>$SHORTNAME@corp.yourcompany.com</string>
+                    -->
+                </dict>
+
+                <!-- Key size — use 2048 for RSA, or switch KeyType to EC with 256 -->
+                <key>KeyType</key>
+                <string>RSA</string>
+
+                <key>KeySize</key>
+                <integer>2048</integer>
+
+                <!-- Key usage: digitalSignature (0x01) + keyEncipherment (0x04) = 0x05 -->
+                <key>KeyUsage</key>
+                <integer>5</integer>
+
+                <!-- Extended key usages for TLS client auth + smart card login -->
+                <key>ExtendedKeyUsage</key>
+                <array>
+                    <string>1.3.6.1.5.5.7.3.2</string>   <!-- TLS client authentication -->
+                    <string>1.3.6.1.4.1.311.20.2.2</string> <!-- Smart card logon (Microsoft) -->
+                </array>
+
+                <!-- SCEP challenge password — pre-shared secret with your SCEP server.
+                     For dynamic challenge passwords, your MDM generates this per-device. -->
+                <key>Challenge</key>
+                <string>CHANGE_ME_SCEP_CHALLENGE</string>
+
+                <!-- CA fingerprint (SHA-256 hex) for SCEP server certificate pinning -->
+                <key>CAFingerprint</key>
+                <data>CHANGE_ME_CA_FINGERPRINT_BASE64</data>
+
+                <!-- Auto-renew 30 days before expiry (macOS 14+) -->
+                <key>Retries</key>
+                <integer>3</integer>
+
+                <key>RetryDelay</key>
+                <integer>10</integer>
+            </dict>
+        </dict>
+    </array>
+
+    <!-- Profile metadata -->
+    <key>PayloadDisplayName</key>
+    <string>CorpToken Employee Certificate Enrollment</string>
+
+    <key>PayloadIdentifier</key>
+    <string>com.yourcompany.CorpToken.scep.profile</string>
+
+    <key>PayloadUUID</key>
+    <string>CHANGE_ME_UNIQUE_UUID_2</string>
+
+    <key>PayloadType</key>
+    <string>Configuration</string>
+
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+
+    <key>PayloadOrganization</key>
+    <string>CHANGE_ME_ORG_NAME</string>
+
+    <!-- Prevent users from removing this profile without MDM authorization -->
+    <key>PayloadRemovalDisallowed</key>
+    <true/>
+
+</dict>
+</plist>

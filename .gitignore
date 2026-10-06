@@ -1,0 +1,27 @@
+# Xcode
+*.xcuserstate
+*.xcbkptlist
+xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Logs and crash reports
+*.crash
+*.log
+
+# Provisioning profiles — never commit these
+*.mobileprovision
+*.provisionprofile
+
+# Archives
+*.xcarchive

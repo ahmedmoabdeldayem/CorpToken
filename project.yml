@@ -1,0 +1,187 @@
+name: CorpToken
+options:
+  bundleIdPrefix: com.yourcompany
+  deploymentTarget:
+    macOS: "13.0"
+  xcodeVersion: "15.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: false
+  defaultConfig: Debug
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+    DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
+    ALWAYS_SEARCH_USER_PATHS: NO
+
+configs:
+  Debug: debug
+  Release: release
+
+targets:
+
+  # ────────────────────────────────────────────────────────────────
+  # Shared — utility framework compiled into both app and extension.
+  # Public types allow @testable import Shared in test targets.
+  # ────────────────────────────────────────────────────────────────
+  Shared:
+    type: framework
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yourcompany.CorpToken.Shared
+        PRODUCT_NAME: Shared
+        DEFINES_MODULE: YES
+        SKIP_INSTALL: YES
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        GENERATE_INFOPLIST_FILE: YES
+        LD_RUNPATH_SEARCH_PATHS: $(inherited) @executable_path/../Frameworks
+
+  # ────────────────────────────────────────────────────────────────
+  # CorpToken — container app (enrollment UI + menu bar)
+  # Module name is CorpTokenApp so tests can @testable import CorpTokenApp
+  # ────────────────────────────────────────────────────────────────
+  CorpToken:
+    type: application
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: CorpTokenApp
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yourcompany.CorpToken
+        PRODUCT_MODULE_NAME: CorpTokenApp
+        PRODUCT_NAME: CorpToken
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: CorpToken
+        INFOPLIST_KEY_NSPrincipalClass: NSApplication
+        INFOPLIST_KEY_LSMinimumSystemVersion: "13.0"
+        LD_RUNPATH_SEARCH_PATHS: $(inherited) @executable_path/../Frameworks
+      configs:
+        Debug:
+          CODE_SIGN_ENTITLEMENTS: Configuration/CorpTokenApp-Debug.entitlements
+        Release:
+          CODE_SIGN_ENTITLEMENTS: Configuration/CorpTokenApp.entitlements
+    dependencies:
+      - target: Shared
+        embed: true
+      - target: CorpTokenExtension
+        embed: true
+
+  # ────────────────────────────────────────────────────────────────
+  # CorpTokenExtension — CryptoTokenKit app extension
+  # Linked against Shared.framework (embedded by the container app)
+  # ────────────────────────────────────────────────────────────────
+  CorpTokenExtension:
+    type: app-extension
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: CorpTokenExtension
+        excludes:
+          - Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yourcompany.CorpToken.TokenExtension
+        PRODUCT_NAME: CorpTokenExtension
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        INFOPLIST_FILE: CorpTokenExtension/Info.plist
+        SKIP_INSTALL: YES
+        LD_RUNPATH_SEARCH_PATHS: $(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks
+      configs:
+        Debug:
+          CODE_SIGN_ENTITLEMENTS: Configuration/CorpTokenExtension-Debug.entitlements
+        Release:
+          CODE_SIGN_ENTITLEMENTS: Configuration/CorpTokenExtension.entitlements
+    dependencies:
+      - target: Shared
+        link: true
+        embed: false
+
+  # ────────────────────────────────────────────────────────────────
+  # Test targets
+  # ────────────────────────────────────────────────────────────────
+  SharedTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: Tests/SharedTests
+    dependencies:
+      - target: Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yourcompany.CorpToken.SharedTests
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        GENERATE_INFOPLIST_FILE: YES
+
+  AppTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: Tests/AppTests
+    dependencies:
+      - target: CorpToken
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yourcompany.CorpToken.AppTests
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        GENERATE_INFOPLIST_FILE: YES
+
+  ExtensionTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: Tests/ExtensionTests
+    dependencies:
+      - target: CorpTokenExtension
+      - target: Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yourcompany.CorpToken.ExtensionTests
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        GENERATE_INFOPLIST_FILE: YES
+
+# ────────────────────────────────────────────────────────────────
+# Schemes — one runnable scheme per target
+# ────────────────────────────────────────────────────────────────
+schemes:
+  CorpToken:
+    build:
+      targets:
+        CorpToken: all
+        CorpTokenExtension: all
+        Shared: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - SharedTests
+        - AppTests
+        - ExtensionTests
+      gatherCoverageData: true
+    profile:
+      config: Release
+    archive:
+      config: Release
+
+  CorpToken Release:
+    build:
+      targets:
+        CorpToken: all
+    archive:
+      config: Release

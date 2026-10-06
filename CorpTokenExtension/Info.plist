@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <!-- =====================================================================
+         Token Extension Identity
+         NSExtensionPointIdentifier must be "com.apple.ctk-tokens" for all
+         CryptoTokenKit token drivers.
+         ===================================================================== -->
+    <key>NSExtension</key>
+    <dict>
+
+        <key>NSExtensionPointIdentifier</key>
+        <string>com.apple.ctk-tokens</string>
+
+        <!-- The driver class instantiated by the CryptoTokenKit daemon.
+             Must match the Swift class name in TokenDriver.swift. -->
+        <key>NSExtensionPrincipalClass</key>
+        <string>$(PRODUCT_MODULE_NAME).CorpTokenDriver</string>
+
+        <key>NSExtensionAttributes</key>
+        <dict>
+
+            <!-- Token class ID — must match CorpTokenConstants.tokenClassID.
+                 The system uses this to match token configurations to this driver.
+                 For virtual (non-smart-card) tokens this value is arbitrary but
+                 must be unique across all installed token drivers. -->
+            <key>com.apple.ctk.class-id</key>
+            <string>com.yourcompany.CorpToken.token</string>
+
+        </dict>
+    </dict>
+
+    <!-- =====================================================================
+         Standard App Extension Keys
+         ===================================================================== -->
+    <key>CFBundleDisplayName</key>
+    <string>CorpToken Extension</string>
+
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+
+    <key>CFBundlePackageType</key>
+    <string>XPC!</string>
+
+    <key>CFBundleShortVersionString</key>
+    <string>$(MARKETING_VERSION)</string>
+
+    <key>CFBundleVersion</key>
+    <string>$(CURRENT_PROJECT_VERSION)</string>
+
+    <key>LSMinimumSystemVersion</key>
+    <string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+
+</dict>
+</plist>

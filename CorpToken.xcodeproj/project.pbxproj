@@ -1,0 +1,1085 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00CA13F31965DC78372FA3D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147790A0F11BD2C5BF3D465D /* Constants.swift */; };
+		18EFB9918403E8C4FB96F7D8 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDDCCD376FFC29783A036740 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19BA087EAE31145A35589B0E /* TokenSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957F39252B200B08321BEE1 /* TokenSessionTests.swift */; };
+		27636B6917AE2EC2CC933570 /* DebugEnrollment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B881648294C97EE20994456F /* DebugEnrollment.swift */; };
+		2A8C024BEDD260F72F474F95 /* CorpTokenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2C7B4563CA811B205271A0 /* CorpTokenApp.swift */; };
+		304CB96775833F24F7A88395 /* EnrollmentAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA98016D38E042FD4FCC1E8 /* EnrollmentAPIClientTests.swift */; };
+		3A5DA3E6C9EC3473625BB07B /* TokenSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A36117684D2AFC25A1706 /* TokenSession.swift */; };
+		3E04CA98BEBBF42068257DCA /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDDCCD376FFC29783A036740 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F2F8F0E1558414F4F1E9907 /* CredentialStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0EA7E5A285EF83BE609CEE /* CredentialStoreTests.swift */; };
+		4235015DD4A364890E7F2C78 /* SecureEnclaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B98EF703197AE7137CFF69 /* SecureEnclaveManager.swift */; };
+		468BD4D63B80579676A94182 /* CertificateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D357FA2AF95DB7947B77B743 /* CertificateParser.swift */; };
+		4BEABC3255672F0B33E8730B /* CertificateParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505665C6C533EE7DF9ED8FCF /* CertificateParserTests.swift */; };
+		5615253C6CEB9A02B6E1D543 /* EnrollmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F0E5CBB17E8FF7C03FABC3 /* EnrollmentViewModel.swift */; };
+		60E16E19F7D005192B6F6C13 /* EnrollmentConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B776D2BA7EEF38FC74B00CF /* EnrollmentConfig.swift */; };
+		74F4604B0A339259BB91842C /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDCCD376FFC29783A036740 /* Shared.framework */; };
+		8AF61602E50A238BC118ABC4 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDDCCD376FFC29783A036740 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		95F75AEA8299140E2814CDA0 /* TokenStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC559969D2D43749642B51F /* TokenStatusView.swift */; };
+		A1294A943C1EF76CAE8CEFBE /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D88B4341504E4B57B75417 /* CredentialStore.swift */; };
+		B0B324D705E088475F56FB7E /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDCCD376FFC29783A036740 /* Shared.framework */; };
+		C85D24D6236203AD9C04F5A3 /* CorpTokenExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3E1C0FCB5741F34CA42410AF /* CorpTokenExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D02593B73FBABD69B1B2F5D5 /* TokenDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8469C013D1512BEA8085C1 /* TokenDriver.swift */; };
+		D188D8ACA4E1DA19E948C18A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDCCD376FFC29783A036740 /* Shared.framework */; };
+		D197C8C3B52094C3AFFB6695 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDCCD376FFC29783A036740 /* Shared.framework */; };
+		DF39738104F39C9499875267 /* EnrollmentAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38F206CBFCB13F84ED1D50 /* EnrollmentAPIClient.swift */; };
+		DFF641005BD39B8592B5AEA3 /* EnrollmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDFB890EC4E1292107CE1D6 /* EnrollmentView.swift */; };
+		E64C90E0CE75123004F087B6 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89236AF2DAE413163E8EA8FA /* Token.swift */; };
+		F67B5CF32A659751954B8E93 /* SecureEnclaveManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944B2684D188A912F020FB7 /* SecureEnclaveManagerTests.swift */; };
+		F7600C1C9DD239BDD1CC5204 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC35932C4BC0F17C54BD75F /* ContentView.swift */; };
+		F84BCD44EF6E1585F9DC34E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F39D15735BD8ABEE6AC3BA6 /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06A68D0896ADB4AE2C51316D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C12411C64A6EEDF6609E6FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27811CC5695361A3AFF89E9D;
+			remoteInfo = Shared;
+		};
+		24B6FF759C890506F32C94F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C12411C64A6EEDF6609E6FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAE2ED5153544F818EEB8F66;
+			remoteInfo = CorpTokenExtension;
+		};
+		6AA6EC22F3DA8F1D1036F94C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C12411C64A6EEDF6609E6FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27811CC5695361A3AFF89E9D;
+			remoteInfo = Shared;
+		};
+		B1A4847A68933AB7D4EAFEC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C12411C64A6EEDF6609E6FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27811CC5695361A3AFF89E9D;
+			remoteInfo = Shared;
+		};
+		BB48C2AA7F82B6304ADDC39E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C12411C64A6EEDF6609E6FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37B9CD9F9835194DAD697DD4;
+			remoteInfo = CorpToken;
+		};
+		CBD263DBF1B21F8B657B4223 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C12411C64A6EEDF6609E6FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAE2ED5153544F818EEB8F66;
+			remoteInfo = CorpTokenExtension;
+		};
+		FBB7B2F46297AAD0940F1763 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C12411C64A6EEDF6609E6FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27811CC5695361A3AFF89E9D;
+			remoteInfo = Shared;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		24BFE5707E74A0330588FA01 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C85D24D6236203AD9C04F5A3 /* CorpTokenExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BBF6855DCB6A37AF8A3E45F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8AF61602E50A238BC118ABC4 /* Shared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C723671DE3A8B86EC1DE281C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				18EFB9918403E8C4FB96F7D8 /* Shared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEC350C2EC05AB7B021C56AB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3E04CA98BEBBF42068257DCA /* Shared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01D2D74827F1059CC781A42D /* SharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A8469C013D1512BEA8085C1 /* TokenDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDriver.swift; sourceTree = "<group>"; };
+		0D0EA7E5A285EF83BE609CEE /* CredentialStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialStoreTests.swift; sourceTree = "<group>"; };
+		0F39D15735BD8ABEE6AC3BA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		147790A0F11BD2C5BF3D465D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		16F0E5CBB17E8FF7C03FABC3 /* EnrollmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentViewModel.swift; sourceTree = "<group>"; };
+		1957F39252B200B08321BEE1 /* TokenSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenSessionTests.swift; sourceTree = "<group>"; };
+		2B776D2BA7EEF38FC74B00CF /* EnrollmentConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentConfig.swift; sourceTree = "<group>"; };
+		3E1C0FCB5741F34CA42410AF /* CorpTokenExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CorpTokenExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		505665C6C533EE7DF9ED8FCF /* CertificateParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateParserTests.swift; sourceTree = "<group>"; };
+		63B98EF703197AE7137CFF69 /* SecureEnclaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureEnclaveManager.swift; sourceTree = "<group>"; };
+		7DC35932C4BC0F17C54BD75F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		89236AF2DAE413163E8EA8FA /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		8BA7033ADA5691C3758CBEBB /* CorpToken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorpToken.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98D88B4341504E4B57B75417 /* CredentialStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialStore.swift; sourceTree = "<group>"; };
+		A59A36117684D2AFC25A1706 /* TokenSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenSession.swift; sourceTree = "<group>"; };
+		A7E2CE8B2E5FA46809AC684B /* ExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B881648294C97EE20994456F /* DebugEnrollment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugEnrollment.swift; sourceTree = "<group>"; };
+		BC38F206CBFCB13F84ED1D50 /* EnrollmentAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentAPIClient.swift; sourceTree = "<group>"; };
+		C944B2684D188A912F020FB7 /* SecureEnclaveManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureEnclaveManagerTests.swift; sourceTree = "<group>"; };
+		CC2C7B4563CA811B205271A0 /* CorpTokenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorpTokenApp.swift; sourceTree = "<group>"; };
+		D357FA2AF95DB7947B77B743 /* CertificateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateParser.swift; sourceTree = "<group>"; };
+		DFDFB890EC4E1292107CE1D6 /* EnrollmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentView.swift; sourceTree = "<group>"; };
+		ECA98016D38E042FD4FCC1E8 /* EnrollmentAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentAPIClientTests.swift; sourceTree = "<group>"; };
+		EDC559969D2D43749642B51F /* TokenStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStatusView.swift; sourceTree = "<group>"; };
+		EDDCCD376FFC29783A036740 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFAD61848646F3A75E26933B /* AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1470AF49BD4B9C3BAEE4A753 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B324D705E088475F56FB7E /* Shared.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26F414BF27C2CE6E07E93AE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D188D8ACA4E1DA19E948C18A /* Shared.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9537447551E7857D67909332 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D197C8C3B52094C3AFFB6695 /* Shared.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6A6B6633D4B4AFC9CDFFE67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F4604B0A339259BB91842C /* Shared.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A1898C88DBF8F82103AF837 /* SharedTests */ = {
+			isa = PBXGroup;
+			children = (
+				505665C6C533EE7DF9ED8FCF /* CertificateParserTests.swift */,
+				0D0EA7E5A285EF83BE609CEE /* CredentialStoreTests.swift */,
+				C944B2684D188A912F020FB7 /* SecureEnclaveManagerTests.swift */,
+			);
+			path = SharedTests;
+			sourceTree = "<group>";
+		};
+		16C15798946D569745B85CE4 /* CorpTokenExtension */ = {
+			isa = PBXGroup;
+			children = (
+				89236AF2DAE413163E8EA8FA /* Token.swift */,
+				0A8469C013D1512BEA8085C1 /* TokenDriver.swift */,
+				A59A36117684D2AFC25A1706 /* TokenSession.swift */,
+			);
+			path = CorpTokenExtension;
+			sourceTree = "<group>";
+		};
+		38A74C1EEC06BC58959D0802 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				B881648294C97EE20994456F /* DebugEnrollment.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		419B44A09282217F8ECB2D38 = {
+			isa = PBXGroup;
+			children = (
+				E46B5C4442FB0C6FD465E396 /* CorpTokenApp */,
+				16C15798946D569745B85CE4 /* CorpTokenExtension */,
+				A1390D18EBFB279DD32614BD /* Shared */,
+				AA3A992903134FFD917D6B60 /* Tests */,
+				BF162B2F35E605B1BBA20F98 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5339AB7C2CFE75E19E35811C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				16F0E5CBB17E8FF7C03FABC3 /* EnrollmentViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5BC27ABB91A198DADB76EE9E /* AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECA98016D38E042FD4FCC1E8 /* EnrollmentAPIClientTests.swift */,
+			);
+			path = AppTests;
+			sourceTree = "<group>";
+		};
+		98FD8CC38235169A269CD8C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7DC35932C4BC0F17C54BD75F /* ContentView.swift */,
+				DFDFB890EC4E1292107CE1D6 /* EnrollmentView.swift */,
+				EDC559969D2D43749642B51F /* TokenStatusView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A1390D18EBFB279DD32614BD /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D357FA2AF95DB7947B77B743 /* CertificateParser.swift */,
+				147790A0F11BD2C5BF3D465D /* Constants.swift */,
+				98D88B4341504E4B57B75417 /* CredentialStore.swift */,
+				63B98EF703197AE7137CFF69 /* SecureEnclaveManager.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AA3A992903134FFD917D6B60 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5BC27ABB91A198DADB76EE9E /* AppTests */,
+				E397076079D0BFB06AF66788 /* ExtensionTests */,
+				0A1898C88DBF8F82103AF837 /* SharedTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		B71AAC53FD71D44E8B78AA56 /* Enrollment */ = {
+			isa = PBXGroup;
+			children = (
+				BC38F206CBFCB13F84ED1D50 /* EnrollmentAPIClient.swift */,
+				2B776D2BA7EEF38FC74B00CF /* EnrollmentConfig.swift */,
+			);
+			path = Enrollment;
+			sourceTree = "<group>";
+		};
+		BF162B2F35E605B1BBA20F98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFAD61848646F3A75E26933B /* AppTests.xctest */,
+				8BA7033ADA5691C3758CBEBB /* CorpToken.app */,
+				3E1C0FCB5741F34CA42410AF /* CorpTokenExtension.appex */,
+				A7E2CE8B2E5FA46809AC684B /* ExtensionTests.xctest */,
+				EDDCCD376FFC29783A036740 /* Shared.framework */,
+				01D2D74827F1059CC781A42D /* SharedTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9A2E59B19A2538BDCF3D520 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0F39D15735BD8ABEE6AC3BA6 /* AppDelegate.swift */,
+				CC2C7B4563CA811B205271A0 /* CorpTokenApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E397076079D0BFB06AF66788 /* ExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				1957F39252B200B08321BEE1 /* TokenSessionTests.swift */,
+			);
+			path = ExtensionTests;
+			sourceTree = "<group>";
+		};
+		E46B5C4442FB0C6FD465E396 /* CorpTokenApp */ = {
+			isa = PBXGroup;
+			children = (
+				D9A2E59B19A2538BDCF3D520 /* App */,
+				38A74C1EEC06BC58959D0802 /* Debug */,
+				B71AAC53FD71D44E8B78AA56 /* Enrollment */,
+				5339AB7C2CFE75E19E35811C /* ViewModels */,
+				98FD8CC38235169A269CD8C6 /* Views */,
+			);
+			path = CorpTokenApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27811CC5695361A3AFF89E9D /* Shared */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7B96B5B455859545F16BB9D /* Build configuration list for PBXNativeTarget "Shared" */;
+			buildPhases = (
+				1F652510B107FFE711D12F24 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shared;
+			packageProductDependencies = (
+			);
+			productName = Shared;
+			productReference = EDDCCD376FFC29783A036740 /* Shared.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3149410EFACC892D09083F5A /* ExtensionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5C89B6AB6910B3D54E198DB /* Build configuration list for PBXNativeTarget "ExtensionTests" */;
+			buildPhases = (
+				3BE4D4E099C38D05BA18F551 /* Sources */,
+				E6A6B6633D4B4AFC9CDFFE67 /* Frameworks */,
+				CEC350C2EC05AB7B021C56AB /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47915371B61D29339833F68C /* PBXTargetDependency */,
+				C2786F0622A8EE1990D4637C /* PBXTargetDependency */,
+			);
+			name = ExtensionTests;
+			packageProductDependencies = (
+			);
+			productName = ExtensionTests;
+			productReference = A7E2CE8B2E5FA46809AC684B /* ExtensionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		37B9CD9F9835194DAD697DD4 /* CorpToken */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B285792471DC0322300E727 /* Build configuration list for PBXNativeTarget "CorpToken" */;
+			buildPhases = (
+				B57C1709728558AFC7CFF8B0 /* Sources */,
+				9537447551E7857D67909332 /* Frameworks */,
+				24BFE5707E74A0330588FA01 /* Embed Foundation Extensions */,
+				C723671DE3A8B86EC1DE281C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9CF0091540359C867D0DD98 /* PBXTargetDependency */,
+				CB9383F62C642D1EF33C6D4F /* PBXTargetDependency */,
+			);
+			name = CorpToken;
+			packageProductDependencies = (
+			);
+			productName = CorpToken;
+			productReference = 8BA7033ADA5691C3758CBEBB /* CorpToken.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8EFD49A40298EDF5D6A2ED72 /* SharedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99A3ACC2202439F79A7B46ED /* Build configuration list for PBXNativeTarget "SharedTests" */;
+			buildPhases = (
+				00414647D03298C08AE6E35C /* Sources */,
+				1470AF49BD4B9C3BAEE4A753 /* Frameworks */,
+				7BBF6855DCB6A37AF8A3E45F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32E6BC89E4FDC6DAECC3C54C /* PBXTargetDependency */,
+			);
+			name = SharedTests;
+			packageProductDependencies = (
+			);
+			productName = SharedTests;
+			productReference = 01D2D74827F1059CC781A42D /* SharedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BAE2ED5153544F818EEB8F66 /* CorpTokenExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78705FAD8C2EBED1B7720EF9 /* Build configuration list for PBXNativeTarget "CorpTokenExtension" */;
+			buildPhases = (
+				6F5AE6F306C59E4577AC990D /* Sources */,
+				26F414BF27C2CE6E07E93AE1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				222BF270B8EDCE565AFA7DF4 /* PBXTargetDependency */,
+			);
+			name = CorpTokenExtension;
+			packageProductDependencies = (
+			);
+			productName = CorpTokenExtension;
+			productReference = 3E1C0FCB5741F34CA42410AF /* CorpTokenExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		FE47BBD0F556B5B506008FA5 /* AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77737533FE120F9C68448120 /* Build configuration list for PBXNativeTarget "AppTests" */;
+			buildPhases = (
+				DCD2B34F13B8FB8E542E714C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83976175F464CFE04AB67AA7 /* PBXTargetDependency */,
+			);
+			name = AppTests;
+			packageProductDependencies = (
+			);
+			productName = AppTests;
+			productReference = FFAD61848646F3A75E26933B /* AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7C12411C64A6EEDF6609E6FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					27811CC5695361A3AFF89E9D = {
+						ProvisioningStyle = Automatic;
+					};
+					3149410EFACC892D09083F5A = {
+						ProvisioningStyle = Automatic;
+					};
+					37B9CD9F9835194DAD697DD4 = {
+						ProvisioningStyle = Automatic;
+					};
+					8EFD49A40298EDF5D6A2ED72 = {
+						ProvisioningStyle = Automatic;
+					};
+					BAE2ED5153544F818EEB8F66 = {
+						ProvisioningStyle = Automatic;
+					};
+					FE47BBD0F556B5B506008FA5 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 67ADBA27F5793B1BE850F1EB /* Build configuration list for PBXProject "CorpToken" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 419B44A09282217F8ECB2D38;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = BF162B2F35E605B1BBA20F98 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27811CC5695361A3AFF89E9D /* Shared */,
+				37B9CD9F9835194DAD697DD4 /* CorpToken */,
+				BAE2ED5153544F818EEB8F66 /* CorpTokenExtension */,
+				8EFD49A40298EDF5D6A2ED72 /* SharedTests */,
+				FE47BBD0F556B5B506008FA5 /* AppTests */,
+				3149410EFACC892D09083F5A /* ExtensionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00414647D03298C08AE6E35C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BEABC3255672F0B33E8730B /* CertificateParserTests.swift in Sources */,
+				3F2F8F0E1558414F4F1E9907 /* CredentialStoreTests.swift in Sources */,
+				F67B5CF32A659751954B8E93 /* SecureEnclaveManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F652510B107FFE711D12F24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				468BD4D63B80579676A94182 /* CertificateParser.swift in Sources */,
+				00CA13F31965DC78372FA3D7 /* Constants.swift in Sources */,
+				A1294A943C1EF76CAE8CEFBE /* CredentialStore.swift in Sources */,
+				4235015DD4A364890E7F2C78 /* SecureEnclaveManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BE4D4E099C38D05BA18F551 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19BA087EAE31145A35589B0E /* TokenSessionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F5AE6F306C59E4577AC990D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E64C90E0CE75123004F087B6 /* Token.swift in Sources */,
+				D02593B73FBABD69B1B2F5D5 /* TokenDriver.swift in Sources */,
+				3A5DA3E6C9EC3473625BB07B /* TokenSession.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B57C1709728558AFC7CFF8B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F84BCD44EF6E1585F9DC34E7 /* AppDelegate.swift in Sources */,
+				F7600C1C9DD239BDD1CC5204 /* ContentView.swift in Sources */,
+				2A8C024BEDD260F72F474F95 /* CorpTokenApp.swift in Sources */,
+				27636B6917AE2EC2CC933570 /* DebugEnrollment.swift in Sources */,
+				DF39738104F39C9499875267 /* EnrollmentAPIClient.swift in Sources */,
+				60E16E19F7D005192B6F6C13 /* EnrollmentConfig.swift in Sources */,
+				DFF641005BD39B8592B5AEA3 /* EnrollmentView.swift in Sources */,
+				5615253C6CEB9A02B6E1D543 /* EnrollmentViewModel.swift in Sources */,
+				95F75AEA8299140E2814CDA0 /* TokenStatusView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCD2B34F13B8FB8E542E714C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				304CB96775833F24F7A88395 /* EnrollmentAPIClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		222BF270B8EDCE565AFA7DF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27811CC5695361A3AFF89E9D /* Shared */;
+			targetProxy = 6AA6EC22F3DA8F1D1036F94C /* PBXContainerItemProxy */;
+		};
+		32E6BC89E4FDC6DAECC3C54C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27811CC5695361A3AFF89E9D /* Shared */;
+			targetProxy = B1A4847A68933AB7D4EAFEC2 /* PBXContainerItemProxy */;
+		};
+		47915371B61D29339833F68C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAE2ED5153544F818EEB8F66 /* CorpTokenExtension */;
+			targetProxy = 24B6FF759C890506F32C94F5 /* PBXContainerItemProxy */;
+		};
+		83976175F464CFE04AB67AA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37B9CD9F9835194DAD697DD4 /* CorpToken */;
+			targetProxy = BB48C2AA7F82B6304ADDC39E /* PBXContainerItemProxy */;
+		};
+		B9CF0091540359C867D0DD98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27811CC5695361A3AFF89E9D /* Shared */;
+			targetProxy = 06A68D0896ADB4AE2C51316D /* PBXContainerItemProxy */;
+		};
+		C2786F0622A8EE1990D4637C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27811CC5695361A3AFF89E9D /* Shared */;
+			targetProxy = FBB7B2F46297AAD0940F1763 /* PBXContainerItemProxy */;
+		};
+		CB9383F62C642D1EF33C6D4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAE2ED5153544F818EEB8F66 /* CorpTokenExtension */;
+			targetProxy = CBD263DBF1B21F8B657B4223 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		028B0DA92F216B2A5F1FFCAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CorpToken.Shared;
+				PRODUCT_NAME = Shared;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		1D6CB1A74897FDA44F9CEB20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Configuration/CorpTokenApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CorpToken;
+				INFOPLIST_KEY_LSMinimumSystemVersion = 13.0;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CorpToken;
+				PRODUCT_MODULE_NAME = CorpTokenApp;
+				PRODUCT_NAME = CorpToken;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		259689D0C8D1E7B06E87D160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CorpToken.Shared;
+				PRODUCT_NAME = Shared;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		2E8BC83241FE357987C83F06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Configuration/CorpTokenApp-Debug.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CorpToken;
+				INFOPLIST_KEY_LSMinimumSystemVersion = 13.0;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CorpToken;
+				PRODUCT_MODULE_NAME = CorpTokenApp;
+				PRODUCT_NAME = CorpToken;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4B120B7816C4540FE90D0C41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		4D41D9EE7804D1984C908D0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CorpToken.SharedTests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		82FDB19AD3868673820BF226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Configuration/CorpTokenExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				INFOPLIST_FILE = CorpTokenExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CorpToken.TokenExtension;
+				PRODUCT_NAME = CorpTokenExtension;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		843417C651B02E463DF0E2B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CorpToken.ExtensionTests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9F45C3597E6EF18A4EC7491A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Configuration/CorpTokenExtension-Debug.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				INFOPLIST_FILE = CorpTokenExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CorpToken.TokenExtension;
+				PRODUCT_NAME = CorpTokenExtension;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A7FF59CEBC3719A481E927CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CorpToken.AppTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CorpToken.app/Contents/MacOS/CorpToken";
+			};
+			name = Release;
+		};
+		B599C768C893A651AA06107E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CorpToken.SharedTests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BF6E7297465FA86B3DE7FC7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CorpToken.ExtensionTests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CA0944C6E06F9965453CF737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CorpToken.AppTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CorpToken.app/Contents/MacOS/CorpToken";
+			};
+			name = Debug;
+		};
+		D5828D7BFB8BE28D169C4626 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B285792471DC0322300E727 /* Build configuration list for PBXNativeTarget "CorpToken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E8BC83241FE357987C83F06 /* Debug */,
+				1D6CB1A74897FDA44F9CEB20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		67ADBA27F5793B1BE850F1EB /* Build configuration list for PBXProject "CorpToken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5828D7BFB8BE28D169C4626 /* Debug */,
+				4B120B7816C4540FE90D0C41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		77737533FE120F9C68448120 /* Build configuration list for PBXNativeTarget "AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0944C6E06F9965453CF737 /* Debug */,
+				A7FF59CEBC3719A481E927CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		78705FAD8C2EBED1B7720EF9 /* Build configuration list for PBXNativeTarget "CorpTokenExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F45C3597E6EF18A4EC7491A /* Debug */,
+				82FDB19AD3868673820BF226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		99A3ACC2202439F79A7B46ED /* Build configuration list for PBXNativeTarget "SharedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B599C768C893A651AA06107E /* Debug */,
+				4D41D9EE7804D1984C908D0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C7B96B5B455859545F16BB9D /* Build configuration list for PBXNativeTarget "Shared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				028B0DA92F216B2A5F1FFCAE /* Debug */,
+				259689D0C8D1E7B06E87D160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D5C89B6AB6910B3D54E198DB /* Build configuration list for PBXNativeTarget "ExtensionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843417C651B02E463DF0E2B2 /* Debug */,
+				BF6E7297465FA86B3DE7FC7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7C12411C64A6EEDF6609E6FE /* Project object */;
+}

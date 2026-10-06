@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Debug entitlements — no Keychain Sharing or App Groups.
+  Works with any personal Apple ID in Xcode (no paid developer account needed).
+
+  What is removed vs production:
+    ✗ keychain-access-groups   — uses per-app default keychain instead
+    ✗ application-groups       — UserDefaults falls back to standard (expiry banner only)
+    ✗ com.apple.security.smartcard — not needed to test the app UI
+
+  What is kept:
+    ✓ app-sandbox              — required for all macOS apps
+    ✓ network.client           — needed for enrollment backend calls
+-->
+<plist version="1.0">
+<dict>
+    <key>com.apple.security.network.client</key>
+    <true/>
+    <key>com.apple.security.get-task-allow</key>
+    <true/>
+</dict>
+</plist>
