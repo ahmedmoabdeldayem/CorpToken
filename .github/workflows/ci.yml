@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Build & Test
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app
+
+      - name: Build
+        working-directory: CorpToken.xcodeproj/..
+        run: |
+          xcodebuild build \
+            -scheme CorpToken \
+            -configuration Debug \
+            -destination 'platform=macOS' \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            | xcpretty || xcodebuild build \
+              -scheme CorpToken \
+              -configuration Debug \
+              -destination 'platform=macOS' \
+              CODE_SIGN_IDENTITY="" \
+              CODE_SIGNING_REQUIRED=NO \
+              CODE_SIGNING_ALLOWED=NO
+
+      - name: Run Tests
+        working-directory: CorpToken.xcodeproj/..
+        run: |
+          xcodebuild test \
+            -scheme CorpToken \
+            -configuration Debug \
+            -destination 'platform=macOS' \
+            -only-testing:SharedTests \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            | xcpretty || xcodebuild test \
+              -scheme CorpToken \
+              -configuration Debug \
+              -destination 'platform=macOS' \
+              -only-testing:SharedTests \
+              CODE_SIGN_IDENTITY="" \
+              CODE_SIGNING_REQUIRED=NO \
+              CODE_SIGNING_ALLOWED=NO
