@@ -129,8 +129,6 @@ final class EnrollmentHTTPClient {
             accessToken: token
         )
 
-        log.info("Enrollment submitted, id: \(enrollmentID, privacy: .public)")
-
         return try await pollForCertificate(
             enrollmentID: enrollmentID,
             accessToken: token,
@@ -297,6 +295,7 @@ final class EnrollmentHTTPClient {
         progress: ((EnrollmentProgress) -> Void)?
     ) async throws -> Data {
         let url = try certStatusURL(for: enrollmentID)
+        log.info("Enrollment submitted, id: \(enrollmentID, privacy: .public)")
 
         // Pre-compute to avoid repeated floating-point multiply in the hot loop.
         let sleepNanoseconds = UInt64(config.pollInterval * 1_000_000_000)

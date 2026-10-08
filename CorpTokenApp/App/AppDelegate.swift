@@ -40,9 +40,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func scheduleExpiryCheckIfNeeded() {
         guard let expiry = CredentialStore.shared.expiryDate() else { return }
 
-        let daysUntilExpiry = Calendar.current.dateComponents([.day], from: Date(), to: expiry).day ?? 0
+        let rawDays = Calendar.current.dateComponents([.day], from: Date(), to: expiry).day ?? 0
+        let daysUntilExpiry = max(0, rawDays)
 
-        guard daysUntilExpiry <= 14 else { return }
+        guard rawDays <= 14 else { return }
 
         let center = UNUserNotificationCenter.current()
 

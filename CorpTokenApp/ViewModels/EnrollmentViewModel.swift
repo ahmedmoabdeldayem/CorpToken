@@ -51,6 +51,11 @@ final class EnrollmentViewModel: ObservableObject {
 
     func enroll(employeeID: String) async {
         guard !isLoading else { return }
+        let employeeID = employeeID.trimmingCharacters(in: .whitespaces)
+        guard !employeeID.isEmpty else {
+            errorMessage = "Employee ID cannot be empty."
+            return
+        }
         errorMessage    = nil
         pendingAuthURL  = nil
         pendingUserCode = nil

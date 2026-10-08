@@ -49,7 +49,7 @@ struct TokenStatusView: View {
 
                     if let expiry = vm.expiryDate {
                         // daysUntilExpiry is pre-computed in the ViewModel (not in body)
-                        let daysLeft = vm.daysUntilExpiry ?? 0
+                        let daysLeft = max(0, vm.daysUntilExpiry ?? 0)
                         DetailRow(
                             label: "Expires",
                             value: Self.dateFormatter.string(from: expiry),
